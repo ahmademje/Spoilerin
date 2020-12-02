@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Spoilerin</string>
+
+    <string-array name="users">
+        <item>User 1</item>
+        <item>User 2</item>
+        <item>User 3</item>
+    </string-array>
+
+    <string-array name="review">
+        <item>Review 1</item>
+        <item>Review 2</item>
+        <item>Review 3</item>
+    </string-array>
+</resources>
