@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="210dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="LOGIN"
+        android:textColor="#807B7B"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/fsEmail"
+        android:layout_width="348dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLogin"
+        app:srcCompat="@drawable/rectangle_1593" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Masukkan Email"
+        app:layout_constraintBottom_toBottomOf="@+id/fsEmail"
+        app:layout_constraintEnd_toEndOf="@+id/fsEmail"
+        app:layout_constraintStart_toStartOf="@+id/fsEmail"
+        app:layout_constraintTop_toTopOf="@+id/fsEmail" />
+
+    <ImageView
+        android:id="@+id/fsPassword"
+        android:layout_width="353dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fsEmail"
+        app:srcCompat="@drawable/rectangle_1593" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Masukkan Password"
+        app:layout_constraintBottom_toBottomOf="@+id/fsPassword"
+        app:layout_constraintEnd_toEndOf="@+id/fsPassword"
+        app:layout_constraintStart_toStartOf="@+id/fsPassword"
+        app:layout_constraintTop_toTopOf="@+id/fsPassword" />
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="349dp"
+        android:layout_height="57dp"
+        android:background="#F6A733"
+        android:fontFamily="sans-serif-medium"
+        android:text="LOGIN"
+        android:textColor="#F8F4F4"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fsPassword"
+        app:layout_constraintVertical_bias="0.444" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
