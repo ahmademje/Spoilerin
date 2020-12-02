@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Spoilerin</string>
+    <string name="judul_film_judul">JUDUL FILM : JUDUL</string>
+    <string name="detail_film">DETAIL : Detail Filmmmmm</string>
 
     <string-array name="users">
         <item>User 1</item>
