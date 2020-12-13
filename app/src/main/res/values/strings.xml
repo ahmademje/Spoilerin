@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Spoilerin</string>
+    <string name="tv_tambah_review">Tambah Review</string>
 
     <string-array name="users">
         <item>User 1</item>
