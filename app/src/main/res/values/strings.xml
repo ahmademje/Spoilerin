@@ -14,4 +14,17 @@
         <item>Review 2</item>
         <item>Review 3</item>
     </string-array>
+
+    <string-array name="judul">
+        <item>judul 1</item>
+        <item>judul 2</item>
+        <item>judul 3</item>
+    </string-array>
+
+    <string-array name="detail">
+        <item>detail 1</item>
+        <item>detail 2</item>
+        <item>detail 3</item>
+    </string-array>
+
 </resources>
