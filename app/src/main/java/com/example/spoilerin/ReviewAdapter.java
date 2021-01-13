@@ -10,14 +10,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.MyViewHolder> {
 
-    String users[], reviews[];
+    List<ReviewModel> reviews;
     Context context;
 
-    public ReviewAdapter(Context context, String users[], String reviews[]){
+    public ReviewAdapter(Context context, List<ReviewModel> reviews){
         this.context = context;
-        this.users = users;
         this.reviews = reviews;
     }
 
@@ -31,13 +32,13 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.tv_user.setText(users[position]);
-        holder.tv_review.setText(reviews[position]);
+        holder.tv_user.setText(reviews.get(position).getAuthor());
+        holder.tv_review.setText(reviews.get(position).getContent());
     }
 
     @Override
     public int getItemCount() {
-        return users.length;
+        return reviews.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

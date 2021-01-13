@@ -3,6 +3,9 @@
     <string name="tv_tambah_review">Tambah Review</string>
     <string name="judul_film_judul">JUDUL FILM : JUDUL</string>
     <string name="detail_film">DETAIL : Detail Filmmmmm</string>
+    <string name="tv_hint_enterurname">Enter Your Name</string>
+    <string name="tv_hint_enterurreview">Enter Your Reviews</string>
+    <string name="btn_text_addreview">Add Reviews</string>
 
     <string-array name="users">
         <item>User 1</item>

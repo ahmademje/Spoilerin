@@ -25,8 +25,7 @@ import java.util.List;
 public class ListReviewActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    String users[], reviews[];
-    List<ReviewModel> reviewList = new ArrayList<>();
+    List<ReviewModel> reviews = new ArrayList<>();
     FloatingActionButton btn_addReview;
 
     @Override
@@ -36,10 +35,9 @@ public class ListReviewActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        users = getResources().getStringArray(R.array.users);
-        reviews = getResources().getStringArray(R.array.review);
+        requestReview(getIntent().getStringExtra("idFilm"));
 
-        ReviewAdapter reviewAdapter = new ReviewAdapter(this, users, reviews);
+        ReviewAdapter reviewAdapter = new ReviewAdapter(this, reviews);
         recyclerView.setAdapter(reviewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -54,7 +52,7 @@ public class ListReviewActivity extends AppCompatActivity {
     }
 
     private void requestReview(String idFilm){
-        final JSONArray[] reviews = {new JSONArray()};
+        final JSONArray[] reviewsArrray = {new JSONArray()};
         AndroidNetworking.get("https://api.themoviedb.org/3/movie/" + idFilm + "/reviews?api_key=ae7dc40dc9096675acf09b3705a4f05c&language=en-US&page=1")
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -62,12 +60,12 @@ public class ListReviewActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         Log.d("cek", "got review");
                         try {
-                            reviews[0] = response.getJSONArray("results");
+                            reviewsArrray[0] = response.getJSONArray("results");
                             for(int i=0; i<4; ++i) {
                                 ReviewModel review = new ReviewModel();
-                                review.setAuthor(reviews[0].getJSONObject(i).getString("author"));
-                                review.setContent(reviews[0].getJSONObject(i).getString("content"));
-                                reviewList.add(review);
+                                review.setAuthor(reviewsArrray[0].getJSONObject(i).getString("author"));
+                                review.setContent(reviewsArrray[0].getJSONObject(i).getString("content"));
+                                reviews.add(review);
                             }
                             //movies = response.getJSONArray("results");
                         } catch (JSONException e) {
@@ -77,6 +75,9 @@ public class ListReviewActivity extends AppCompatActivity {
 
                     @Override
                     public void onError(ANError anError) {
+                        Log.d("cek", anError.getErrorDetail());
+                        Log.d("cek", String.valueOf(anError.getErrorCode()));
+                        Log.d("cek", anError.getResponse().message().toString());
                         Log.d("cek", "failed got a Review");
                     }
                 });

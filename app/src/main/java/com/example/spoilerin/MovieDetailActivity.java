@@ -11,17 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.androidnetworking.AndroidNetworking;
-import com.androidnetworking.error.ANError;
-import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.bumptech.glide.Glide;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MovieDetailActivity  extends AppCompatActivity {
     ImageView iv_gambarFilm;
@@ -57,6 +47,7 @@ public class MovieDetailActivity  extends AppCompatActivity {
 
     private void redirectToReviewFilmbyId(String idFilm){
         Intent intent = new Intent(MovieDetailActivity.this, ListReviewActivity.class);
+        Log.d("cek", "idFilm Detail Movie = " + idFilm);
         intent.putExtra("idFilm", idFilm);
         startActivity(intent);
     }
