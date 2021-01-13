@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "300272758370",
+    "firebase_url": "https://spoolin-677dd-default-rtdb.firebaseio.com",
+    "project_id": "spoolin-677dd",
+    "storage_bucket": "spoolin-677dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300272758370:android:537515fee1bbc346b1ab3b",
+        "android_client_info": {
+          "package_name": "com.example.spoilerin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300272758370-sjt16ll1ou4j1fj6b9b93kf391es9kp7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.spoilerin",
+            "certificate_hash": "dfa0039c5f74c2f2e69318f608e24ded7801cf5d"
+          }
+        },
+        {
+          "client_id": "300272758370-nier4qr8367e8sfc7n7s2t2f8gshshs5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd1U1AyTgChTh8lqZlHHygWuyd3lmI1e8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "300272758370-nier4qr8367e8sfc7n7s2t2f8gshshs5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

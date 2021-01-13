@@ -1,31 +1,52 @@
 package com.example.spoilerin;
 
-public class MovieModel {
-    int image;
-    String judul;
-    String detail;
+import java.io.Serializable;
 
-    public int getImage() {
-        return image;
+public class MovieModel implements Serializable {
+    String id;
+    String title;
+    String overview;
+    String posterPath;
+
+    public String getPosterPath() {
+        return posterPath;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
     }
 
-    public String getJudul() {
-        return judul;
+    public MovieModel(String id, String title, String overview) {
+        this.id = id;
+        this.title = title;
+        this.overview = overview;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
+    public MovieModel(){
+
     }
 
-    public String getDetail() {
-        return detail;
+    public String getId() {
+        return id;
     }
 
-    public void setDetail(String detail) {
-        this.detail = detail;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
     }
 }
